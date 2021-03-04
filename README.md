@@ -29,4 +29,3 @@ Visit my [Github](http://www.github.com/kpessa) at github.com/kpessa
 
 or
 email me at [kpessa@gmail.com](mailto:kpessa@gmail.com)
-  
