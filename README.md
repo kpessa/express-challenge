@@ -2,7 +2,7 @@
 # express-challenge
   
 ## Description
-This repository contains an express web app that implements a javascript express web app using GET, POST, and DELTE http verbs.
+This repository contains an express web app that implements a javascript express web app using `GET`, `POST`, and `DELETE` http verbs.
 
 ## Table of Contents
 * [Installation](#installation)
