@@ -52,8 +52,9 @@ const deleteNote = id =>
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
-
-  if (activeNote.id) {
+  // 'jshint' doesn't recognise optional chaining (?.) syntax
+  /* jshint ignore:start */
+  if (activeNote?.id) {
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
@@ -64,6 +65,7 @@ const renderActiveNote = () => {
     noteTitle.value = '';
     noteText.value = '';
   }
+  /* jshint ignore:end */
 };
 
 const handleNoteSave = () => {
@@ -156,8 +158,6 @@ const renderNoteList = async notes => {
 
     noteListItems.push(li);
   });
-
-  console.log(window.location.pathname);
 
   if (window.location.pathname === '/notes' || window.location.pathname === '/notes/') {
     noteListItems.forEach(note => noteList[0].append(note));

@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const express = require('express');
+const { endianness } = require('os');
 const app = express();
 
 const PORT = process.env.PORT || 3000;
@@ -39,7 +40,7 @@ app.get('/api/notes', (req, res) => {
 app.post('/api/notes', (req, res) => {
   let notes = JSON.parse(fs.readFileSync('./db/db.json') || []);
   let newNote = {
-    id: Math.max(...notes.map(note => note.id)) + 1,
+    id: notes.length == 0 ? 1 : Math.max(...notes.map(note => note.id)) + 1,
     ...req.body,
   };
   notes.push(newNote);
@@ -50,6 +51,7 @@ app.post('/api/notes', (req, res) => {
 // * 3.) DELETE / DELETE route for notes  *
 // ****************************************
 app.delete('/api/notes/:id', (req, res) => {
+  if (!req.params.id) res.end();
   let notes = JSON.parse(fs.readFileSync('./db/db.json') || []);
   let noteIndex = notes.findIndex(note => note.id === +req.params.id);
   let note = notes.splice(noteIndex, 1);
