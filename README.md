@@ -15,7 +15,7 @@ This repository contains an express web app that implements a javascript express
 clone or download the repository, and with npm installed, run <code>npm install</code>
 
 ## Usage
-To use, run <code>node app.js<code> from the terminal
+To use, run <code>node app.js</code> from the terminal
 
 ## License
 <a href="https://choosealicense.com/licenses/mit"><img src="https://img.shields.io/badge/license-MIT-yellow" alt="MIT badge"></a>
