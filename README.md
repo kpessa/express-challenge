@@ -1,6 +1,10 @@
 <a href="https://choosealicense.com/licenses/mit"><img src="https://img.shields.io/badge/license-MIT-yellow" alt="MIT badge"></a>
 # express-challenge
-  
+
+Web application deployed at https://express-challenge-notes.herokuapp.com/
+
+![screencast of app live on heroku](./screencast.gif)
+
 ## Description
 This repository contains an express web app that implements a javascript express web app using `GET`, `POST`, and `DELETE` http verbs.
 
